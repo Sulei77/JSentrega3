@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: rgb(0, 0, 0);
+    background-color: rgb(110, 176, 179);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tarjetas{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.mb{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.btnSave{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-label{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+

@@ -62,11 +62,11 @@ function mostrarCatalogo(array) {
         let nuevoIndumentaria = document.createElement("div")
         nuevoIndumentaria.classList.add("col-12", "col-md-6", "col-lg-4", "my-4")
         nuevoIndumentaria.innerHTML = `<div id="${indumentaria.id}" class="card" style="width: 18rem;">
-        <img class="card-img-top img-fluid" style="height: 200px;"src="assets/${indumentaria.imagen}" alt="${indumentaria.titulo} de ${indumentaria.prenda}">
+        <img class="card-img-top img-fluid" style="height: 200px;"src="img/${indumentaria.imagen}" alt="${indumentaria.titulo} de ${indumentaria.prenda}">
         <div class="card-body">
             <h4 class="card-title">${indumentaria.titulo}</h4>
-            <p>Autor: ${indumentaria.prenda}</p>
-            <p class="">Precio: ${indumentaria.precio}</p>
+            <p>Genero: ${indumentaria.prenda}</p>
+            <p class="">Valor: ${indumentaria.precio}</p>
         <button id="agregarBtn${indumentaria.id}" class="btn btn-outline-success">Agregar al carrito</button>
         </div>
 </div>`
@@ -89,7 +89,7 @@ function cargarProductosCarrito(array) {
 
     array.forEach(productoCarrito => {
         modalBody.innerHTML += `<div class="card border-primary mb-3" id ="productoCarrito${productoCarrito.id}" style="max-width: 540px;">
-                <img class="card-img-top" height="300px" src="assets/${productoCarrito.imagen}" alt="${productoCarrito.titulo}">
+                <img class="card-img-top" height="300px" src="img/${productoCarrito.imagen}" alt="${productoCarrito.titulo}">
         <div class="card-body">
             <h4 class="card-title">${productoCarrito.titulo}</h4>
             <p class="card-text">$${productoCarrito.precio}</p> 
@@ -117,7 +117,7 @@ function cargarIndumentaria(array) {
     let inputTitulo = document.getElementById("tituloInput")
     let inputPrecio = document.getElementById("precioInput")
 
-    let indumentariaCreado = new indumentaria(array.length + 1, inputAutor.value, inputTitulo.value, parseInt(inputPrecio.value), "indumentariaNuevo.jpg")
+    let indumentariaCreado = new Indumentaria(array.length + 1, inputAutor.value, inputTitulo.value, parseInt(inputPrecio.value), "indumentariaNuevo.jpg")
     array.push(indumentariaCreado)
     localStorage.setItem("estanteria", JSON.stringify(array))
     mostrarCatalogo(array)
