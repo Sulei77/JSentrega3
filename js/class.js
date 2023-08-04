@@ -23,6 +23,6 @@ let estanteria = []
 if (localStorage.getItem("estanteria")) {
     estanteria = JSON.parse(localStorage.getItem("estanteria"))
 }else{
-    estanteria.push(libro1, libro2, libro3, libro4, libro5, libro6)
+    estanteria.push(indumentaria1, indumentaria2, indumentaria3, indumentaria4, indumentaria5, indumentaria6)
     localStorage.setItem("estanteria", JSON.stringify(estanteria))
 }
