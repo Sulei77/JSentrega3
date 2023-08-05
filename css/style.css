@@ -6,7 +6,15 @@
 
 body{
     color: rgb(0, 0, 0);
-    background-color: rgb(110, 176, 179);
+    background-color: rgb(233, 232, 232);
+}
+.navbar{
+    background-color: white;
+    padding-top: 30px;
+}
+.container-fluid{
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 30px;
 }
 .container{
     display: flex;
@@ -14,12 +22,10 @@ body{
     align-items: center;
     text-align: center;
 }
-
-.tarjetas{
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mb{
