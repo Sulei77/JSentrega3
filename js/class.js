@@ -18,11 +18,11 @@ const indumentaria4 = new Indumentaria (4, "Mujer", "Camisa", 14000, "camisamuje
 const indumentaria5 = new Indumentaria (5, "Hombre", "Chaleco", 10000, "chaleco--1.webp")
 const indumentaria6 = new Indumentaria (6, "Unisex", "Cinturon", 3400, "cinturon002.webp")
 
-let estanteria = []
+let guardarropas = []
 
-if (localStorage.getItem("estanteria")) {
-    estanteria = JSON.parse(localStorage.getItem("estanteria"))
+if (localStorage.getItem("guardarropas")) {
+    guardarropas = JSON.parse(localStorage.getItem("guardarropas"))
 }else{
-    estanteria.push(indumentaria1, indumentaria2, indumentaria3, indumentaria4, indumentaria5, indumentaria6)
-    localStorage.setItem("estanteria", JSON.stringify(estanteria))
+    guardarropas.push(indumentaria1, indumentaria2, indumentaria3, indumentaria4, indumentaria5, indumentaria6)
+    localStorage.setItem("guardarropas", JSON.stringify(guardarropas))
 }

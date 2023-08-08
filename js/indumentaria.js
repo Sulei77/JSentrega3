@@ -6,21 +6,21 @@ if (localStorage.getItem("carrito")) {
     localStorage.setItem("carrito", JSON.stringify(ropaEnCarrito))
 }
 
-function findIndumentaria(explore, array) {
-    let search = array.filter(
-        (indumentaria) => indumentaria.prenda.toLowerCase().includes(explore.toLowerCase()) ||
-            indumentaria.titulo.toLowerCase().includes(explore.toLowerCase())
+function findInfo(buscado, array) {
+    let busqueda = array.filter(
+        (indumentaria) => indumentaria.prenda.toLowerCase().includes(buscado.toLowerCase()) ||
+            indumentaria.titulo.toLowerCase().includes(buscado.toLowerCase())
     )
 
-    if (search.length == 0) {
+    if (busqueda.length == 0) {
         coincide.innerHTML = ""
         let nuevoDiv = document.createElement("div")
-        nuevoDiv.innerHTML = `<p> No coincide </p>`
+        nuevoDiv.innerHTML = `<p> No coincide</p>`
         coincide.appendChild(nuevoDiv)
         mostrarCatalogo(array)
     } else {
         coincide.innerHTML = ""
-        mostrarCatalogo(search)
+        mostrarCatalogo(busqueda)
     }
 }
 
@@ -113,25 +113,25 @@ function cargarProductosCarrito(array) {
 }
 
 function cargarIndumentaria(array) {
-    let inputAutor = document.getElementById("autorInput")
+    let inputRopa = document.getElementById("autorInput")
     let inputTitulo = document.getElementById("tituloInput")
     let inputPrecio = document.getElementById("precioInput")
 
-    let indumentariaCreado = new Indumentaria(array.length + 1, inputAutor.value, inputTitulo.value, parseInt(inputPrecio.value), "indumentariaNuevo.jpg")
+    let indumentariaCreado = new Indumentaria(array.length + 1, inputRopa.value, inputTitulo.value, parseInt(inputPrecio.value), "rockattire2.png")
     array.push(indumentariaCreado)
-    localStorage.setItem("estanteria", JSON.stringify(array))
+    localStorage.setItem("guardarropas", JSON.stringify(array))
     mostrarCatalogo(array)
-    inputAutor.value = ""
+    inputRopa.value = ""
     inputTitulo.value = ""
     inputPrecio.value = ""
 }
 
 btnGuardarIndumentaria.addEventListener("click", () => {
-    cargarIndumentaria(estanteria)
+    cargarIndumentaria(guardarropas)
 })
 
 buscador.addEventListener("input", () => {
-    buscarInfo(buscador.value, estanteria)
+    findInfo(buscador.value, guardarropas)
 })
 
 botonCarrito.addEventListener("click", () => {
@@ -140,19 +140,19 @@ botonCarrito.addEventListener("click", () => {
 
 selectOrden.addEventListener("change", () => {
     if (selectOrden.value == 1) {
-        ordenarMayorMenor(estanteria)
+        ordenarMayorMenor(guardarropas)
     }
 
     else if (selectOrden.value == 2) {
-        ordenarMenorMayor(estanteria)
+        ordenarMenorMayor(guardarropas)
     }
 
     else if (selectOrden.value == 3) {
-        ordenarAlfabeticamente(estanteria)
+        ordenarAlfabeticamente(guardarropas)
     }
     else {
-        mostrarCatalogo(estanteria)
+        mostrarCatalogo(guardarropas)
     }
 })
 
-mostrarCatalogo(estanteria)
+mostrarCatalogo(guardarropas)
