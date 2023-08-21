@@ -8,6 +8,7 @@ body{
     color: rgb(0, 0, 0);
     background-color: rgb(233, 232, 232);
 }
+
 .navbar{
     background-color: white;
     padding-top: 30px;
@@ -22,11 +23,11 @@ body{
     align-items: center;
     text-align: center;
 } */
-.card{
+/* .card{
     display: flex;
     justify-content: center;
     align-items: start;
-}
+} */
 
 .mb{
     display: flex;
