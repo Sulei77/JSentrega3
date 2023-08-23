@@ -1,0 +1,47 @@
+[
+    {
+        "id":1,
+        "prenda": "Unisex",
+        "titulo": "Billetera Cuero",
+        "precio": "5000",
+        "imagen": "billetera001.webp"
+    },
+    {
+        "id":2,
+        "prenda": "Unisex",
+        "titulo": "Billetera",
+        "precio": "5000",
+        "imagen": "billetera002.webp"
+    },
+    {
+        "id":3,
+        "prenda": "Mujer",
+        "titulo": "Buzo",
+        "precio": "15000",
+        "imagen": "buzomujer001.webp"
+    },
+    {
+        "id":4,
+        "prenda": "Mujer",
+        "titulo": "Camisa",
+        "precio": "14000",
+        "imagen": "camisamujer003.webp"
+    },
+    {
+        "id":5,
+        "prenda": "Hombre",
+        "titulo": "Chaleco",
+        "precio": "10000",
+        "imagen": "chaleco--1.webp"
+    },
+    {
+        "id":6,
+        "prenda": "Unisex",
+        "titulo": "Cinturon",
+        "precio": "3400",
+        "imagen": "cinturon002.webp"
+    }
+]
+
+
+

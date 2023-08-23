@@ -6,6 +6,10 @@ if (localStorage.getItem("carrito")) {
     localStorage.setItem("carrito", JSON.stringify(ropaEnCarrito))
 }
 
+function getclothes () {
+    return fetch("./data.json").then(response => response.json()) 
+}
+
 function findInfo(buscado, array) {
     let busqueda = array.filter(
         (indumentaria) => indumentaria.prenda.toLowerCase().includes(buscado.toLowerCase()) ||
@@ -155,4 +159,7 @@ selectOrden.addEventListener("change", () => {
     }
 })
 
-mostrarCatalogo(guardarropas)
+getclothes().then(clothes => {
+    mostrarCatalogo(clothes)
+})
+
