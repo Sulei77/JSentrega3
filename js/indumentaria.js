@@ -1,5 +1,6 @@
 let ropaEnCarrito = []
 
+
 if (localStorage.getItem("carrito")) {
     ropaEnCarrito = JSON.parse(localStorage.getItem("carrito"))
 } else {
@@ -129,7 +130,7 @@ function cargarIndumentaria(array) {
     inputTitulo.value = ""
     inputPrecio.value = ""
 }
-
+ 
 btnGuardarIndumentaria.addEventListener("click", () => {
     cargarIndumentaria(guardarropas)
 })
@@ -138,7 +139,9 @@ buscador.addEventListener("input", () => {
     findInfo(buscador.value, guardarropas)
 })
 
+
 botonCarrito.addEventListener("click", () => {
+   
     cargarProductosCarrito(ropaEnCarrito)
 })
 
@@ -161,5 +164,7 @@ selectOrden.addEventListener("change", () => {
 
 getclothes().then(clothes => {
     mostrarCatalogo(clothes)
-})
+    
+});
+
 
